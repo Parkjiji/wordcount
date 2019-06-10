@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1 {
+        color: #3366cc;
+        font-family: serif;
+         }
+        h2 {
+        color: #7094db;
+        font-family: serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>The text you entered is made up of {{total}} characters.</h1>
+
+    <a href = "{% url 'home' %}"> Again </a>
+    <br>
+    <h2> Text entered : </h2>
+    {{full}}
+    <h2> Word count : </h2>
+    {% for word, howmany in dictionary %}
+
+    {{word}} : {{howmany}}
+    <br>
+    {% endfor %}
+</body>
+</html>
